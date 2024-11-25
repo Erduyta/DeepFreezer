@@ -1,0 +1,32 @@
+# Python
+*.pyc
+__pycache__
+venv/
+.env
+*.log
+dependencies/
+create_github_repo.sh
+*.pdf
+/model
+
+# Virtualenv
+/venv
+
+# IPython Notebook
+.ipynb_checkpoints/
+# Python
+*.pyc
+__pycache__
+venv/
+.env
+*.log
+dependencies/
+create_github_repo.sh
+*.pdf
+/model
+
+# Virtualenv
+/venv
+
+# IPython Notebook
+.ipynb_checkpoints/
