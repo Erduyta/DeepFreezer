@@ -1,10 +1,23 @@
 require "prefabutil"
 require "vector3"
+require "util"
 
 local assets=
 {
 	Asset("ANIM", "anim/deep_freezer.zip"),
 }
+
+local function clearitemslayers(inst)
+    inst.AnimState:Show("door")
+end
+
+local function updateitemslayers(inst)
+    clearitemslayers(inst)
+    local full_part = GetTableSize(inst.components.container.slots)/inst.components.container.numslots
+    if full_part > 0.5 then
+        inst.AnimState:Hide("door")
+    end
+end
 
 local function onopen(inst)
     inst.AnimState:PlayAnimation("open")
@@ -13,7 +26,8 @@ end
 
 local function onclose(inst) 
 	inst.AnimState:PlayAnimation("closed")
-	inst.SoundEmitter:PlaySound("dontstarve/wilson/chest_close")		
+	inst.SoundEmitter:PlaySound("dontstarve/wilson/chest_close")
+    updateitemslayers(inst)
 end 
 
 local function onhammered(inst, worker)
