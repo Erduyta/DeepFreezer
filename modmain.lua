@@ -7,7 +7,6 @@ Assets =
 {
     Asset( "IMAGE", "minimap/deep_freezer.tex" ),
     Asset( "ATLAS", "minimap/deep_freezer.xml" ),
-    Asset("ATLAS", "images/inventoryimages/ui_chest_3x4.xml"),
     Asset("ATLAS", "images/inventoryimages/deep_freezer.xml"),
 }
 
@@ -26,8 +25,6 @@ local eightxten = (GetModConfigData("eightxten") == "8x10")
 GLOBAL.yep = (GetModConfigData("workit") == "yep")
 GLOBAL.chillit = (GetModConfigData("chillit") == "yep")
 
--- Добавление рецепта с AddRecipe2
---AddRecipe("deep_freezer", {Ingredient("goldnugget", 2), Ingredient("gears", 1), Ingredient("cutstone", 1)}, RECIPETABS.FARM, TECH.SCIENCE_TWO, "deep_freezer_placer", 1.5)
 AddRecipe2("deep_freezer",
     {
         Ingredient("cutstone", 2),

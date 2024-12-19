@@ -1,5 +1,5 @@
 name = "Deep freezer"
-description = "TESTS"
+description = "Adds deep dark fantasy freezer to the game!\nA new end game refrigerator that has 12 slots and stops food spoilage."
 author = "Erdutya & Buu"
 version = "2.1"
 
