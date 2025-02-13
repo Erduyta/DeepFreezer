@@ -1,9 +1,9 @@
-##Deep Freezer Mod
+## Deep Freezer Mod
 Eager to dive into modding for Don’t Starve Together? Here are some helpful pointers to get you started!
 
 ---
 
-#🎨 Modding Tool Setup
+# 🎨 Modding Tool Setup
 To begin, you’ll need the official modding tool from Steam. Here’s how to get it:
 
 1. **Own the Game** – Make sure you own Don’t Starve Together on Steam.
@@ -11,7 +11,7 @@ To begin, you’ll need the official modding tool from Steam. Here’s how to ge
 
 ---
 
-#🔗 Mod Link
+# 🔗 Mod Link
 Check out the **Deep Freezer mod** on Steam Workshop:
 [Deep Freezer](https://steamcommunity.com/sharedfiles/filedetails/?id=3426670300)
 
@@ -19,7 +19,7 @@ Feel free to drop any questions in the Steam Workshop comments – I’m happy t
 
 ---
 
-#🔧 Useful Directories and Tools
+# 🔧 Useful Directories and Tools
 - Mods from Workshop:
 `D:\SteamLibrary\steamapps\workshop\content\322330`
 
@@ -34,11 +34,11 @@ Feel free to drop any questions in the Steam Workshop comments – I’m happy t
 
 ---
 
-#⚙️ Animation and Texture Tools
+# ⚙️ Animation and Texture Tools
 - [Spriter and Ktools](https://github.com/ZzzzzzzSkyward/DSTmodutils) – Essential for working with animations and textures:
 
   - **Spriter** – For creating custom animations.
-   - **Ktools** – To extract animations:
+  - **Ktools** – To extract animations:
 
     `.\krane input output_dir`
     The input folder should contain:
@@ -49,5 +49,5 @@ Feel free to drop any questions in the Steam Workshop comments – I’m happy t
 
 ---
 
-#❓ Questions?
+# ❓ Questions?
 If you run into any issues or have questions about modding, feel free to reach out in the Steam Workshop comments. Happy modding!
