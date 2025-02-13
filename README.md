@@ -1,3 +1,12 @@
+There is a modding tool inside steam (you need to own the game). Just tick tools in the library and install "Don't starve modding tools"!
+
+Link to the mod:https://steamcommunity.com/sharedfiles/filedetails/?id=3426670300
+
+I'll be happy to answer your questions in the Steam Workshop comments!
+
+
+Kinda useful stuff:
+
 mods from workshop: D:\SteamLibrary\steamapps\workshop\content\322330
 
 scripts from klei:  C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\data\databundles
@@ -15,3 +24,4 @@ ktools to extract animations: .\krane input output_dir
 input has anim.bin; altas-0.tex; build.bin;
 
 dst mod tools to compile anims and textures on launch ("/exported"): https://steamdb.info/app/245850/info/
+
