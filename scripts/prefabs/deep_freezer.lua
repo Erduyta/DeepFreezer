@@ -149,25 +149,7 @@ local function fn(Sim)
     inst:AddComponent("inspectable")
 
     inst:AddComponent("container")
-    local data = {
-        widget =
-        {
-            slotpos = {},
-            animbank = "ui_chester_shadow_3x4",
-            animbuild = "ui_chester_shadow_3x4",
-            pos = Vector3(0, 220, 0),
-            side_align_tip = 160,
-        },
-        type = "chest",
-    }
-    for y = 2.5, -0.5, -1 do
-        for x = 0, 2 do
-            table.insert(data.widget.slotpos, Vector3(75 * x - 75 * 2 + 75, 75 * y - 75 * 2 + 75, 0))
-        end
-    end
-    inst.components.container.widget = data.widget
-    inst.components.container:WidgetSetup("deep_freezer", data)
-    inst.components.container.widget = data.widget
+    inst.components.container:WidgetSetup("deep_freezer")
     inst.components.container.skipclosesnd = true
     inst.components.container.skipopensnd = true
 

@@ -103,7 +103,40 @@ if recipe_difficulty == 4 then
     )
 end
 
+local _G = GLOBAL
 
-local containers = require "containers"
-containers.params["deep_freezer"] = containers.params.shadowchester
+local data_ = {
+    widget =
+    {
+        slotpos = {},
+        animbank = "ui_chester_shadow_3x4",
+        animbuild = "ui_chester_shadow_3x4",
+        pos = _G.Vector3(0, 220, 0),
+        side_align_tip = 160,
+    },
+    type = "chest",
+}
+-- y and x make the slots. 0 counts as a row.
+for y = 2.5, -0.5, -1 do
+    for x = 0, 2 do
+        table.insert(data_.widget.slotpos, _G.Vector3(75 * x - 75 * 2 + 75, 75 * y - 75 * 2 + 75, 0))
+    end
+end
 
+local containers = _G.require "containers"
+containers.MAXITEMSLOTS = math.max(containers.MAXITEMSLOTS, data_.widget.slotpos ~= nil and #data_.widget.slotpos or 0)
+local old_widgetsetup = containers.widgetsetup
+function containers.widgetsetup(container, prefab, data)
+        local pref = prefab or container.inst.prefab
+        if pref == "deep_freezer" then
+                local t = data_
+                if t ~= nil then
+                        for k, v in pairs(t) do
+                                container[k] = v
+                        end
+                        container:SetNumSlots(container.widget.slotpos ~= nil and #container.widget.slotpos or 0)
+                end
+        else
+            return old_widgetsetup(container, prefab)
+    end
+end
