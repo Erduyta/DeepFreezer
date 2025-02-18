@@ -37,6 +37,29 @@ local function printTable(tbl, indent)
 end
 
 
+local function getstatus(inst, viewer)
+	return inst._chestupgrade_stacksize and "UPGRADED_STACKSIZE" or nil
+end
+
+
+local function OnUpgrade(inst, performer, upgraded_from_item)
+    local numupgrades = inst.components.upgradeable.numupgrades
+    if numupgrades == 1 then
+        inst._chestupgrade_stacksize = true
+        if inst.components.container ~= nil then -- NOTES(JBK): The container component goes away in the burnt load but we still want to apply builds.
+            inst.components.container:Close()
+            inst.components.container:EnableInfiniteStackSize(true)
+            inst.components.inspectable.getstatus = getstatus
+        end
+    end
+    inst.components.upgradeable.upgradetype = nil
+
+    if inst.components.lootdropper ~= nil then
+        inst.components.lootdropper:SetLoot({ "alterguardianhatshard" })
+    end
+end
+
+
 local function updateitemslayers(inst)
     clearitemslayers(inst)
     local full_part = GetTableSize(inst.components.container.slots)/inst.components.container.numslots
@@ -112,6 +135,9 @@ local function onsave(inst, data)
 end
 
 local function onload(inst, data)
+    if inst.components.upgradeable ~= nil and inst.components.upgradeable.numupgrades > 0 then
+        OnUpgrade(inst)
+    end
     if data ~= nil and data.burnt then
         inst.components.burnable.onburnt(inst)
     else
@@ -158,6 +184,10 @@ local function fn(Sim)
     inst.components.container.onclosefn = onclose
     
     inst:AddComponent("lootdropper")
+
+    local upgradeable = inst:AddComponent("upgradeable")
+    upgradeable.upgradetype = UPGRADETYPES.CHEST
+    upgradeable:SetOnUpgradeFn(OnUpgrade)
 
     inst.OnSave = onsave
     inst.OnLoad = onload
