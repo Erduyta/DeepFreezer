@@ -1,11 +1,11 @@
 name = "Deep freezer"
 description = "Adds deep dark fantasy freezer to the game!\nA new end game refrigerator that has 12 slots and stops food spoilage."
 author = "Erdutya & Buu"
-version = "1.0.2"
+version = "1.0.4"
 
 api_version = 10
 
-priority = -1
+priority = 1
 dst_compatible = true
 all_clients_require_mod = true
 client_only_mod = false

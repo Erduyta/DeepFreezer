@@ -151,7 +151,7 @@ local function fn(Sim)
 	inst.entity:AddAnimState()
 	inst.entity:AddSoundEmitter()
 	inst.entity:AddNetwork()
-    inst:SetDeploySmartRadius(0.75)
+    -- inst:SetDeploySmartRadius(0.75)
     -- MakeObstaclePhysics(inst, 0.2)
 
 	local minimap = inst.entity:AddMiniMapEntity()

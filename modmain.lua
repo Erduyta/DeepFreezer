@@ -33,7 +33,8 @@ if recipe_difficulty == 0 then
         {
             atlas = "images/inventoryimages/deep_freezer.xml",
             image = "deep_freezer.tex",
-            placer = "common/deep_freezer_placer"
+            placer = "common/deep_freezer_placer",
+            min_spacing=1.5
         },
         { "CONTAINERS" }
     )
@@ -49,7 +50,8 @@ if recipe_difficulty == 1 then
         {
             atlas = "images/inventoryimages/deep_freezer.xml",
             image = "deep_freezer.tex",
-            placer = "common/deep_freezer_placer"
+            placer = "common/deep_freezer_placer",
+            min_spacing=1.5
         },
         { "CONTAINERS" }
     )
@@ -65,7 +67,8 @@ if recipe_difficulty == 2 then
         {
             atlas = "images/inventoryimages/deep_freezer.xml",
             image = "deep_freezer.tex",
-            placer = "common/deep_freezer_placer"
+            placer = "common/deep_freezer_placer",
+            min_spacing=1.5
         },
         { "CONTAINERS" }
     )
@@ -81,7 +84,8 @@ if recipe_difficulty == 3 then
         {
             atlas = "images/inventoryimages/deep_freezer.xml",
             image = "deep_freezer.tex",
-            placer = "common/deep_freezer_placer"
+            placer = "common/deep_freezer_placer",
+            min_spacing=1.5
         },
         { "CONTAINERS" }
     )
@@ -97,11 +101,13 @@ if recipe_difficulty == 4 then
         {
             atlas = "images/inventoryimages/deep_freezer.xml",
             image = "deep_freezer.tex",
-            placer = "common/deep_freezer_placer"
+            placer = "common/deep_freezer_placer",
+            min_spacing=1.5
         },
         { "CONTAINERS" }
     )
 end
+
 
 local _G = GLOBAL
 
